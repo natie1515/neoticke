@@ -1,5 +1,208 @@
-<!doctype html><html><head><meta charset='utf-8'><title>NeoTicket</title><link rel='stylesheet' href='css/style.css'></head><body><nav class='nav'><div class='wrap row'><a class='logo' href='index.html'>🎀 NeoTicket</a><div class='links'><a href='index.html'>Home</a><a href='terms.html'>Terms</a><a href='privacy.html'>Privacy</a><button id='theme' class='toggle'>🌙</button></div></div></nav>
-<section class='hero'><h1>NeoTicket Legal Center</h1><p>Professional legal documentation for your Discord ticket bot.</p>
-<a class='btn' href='terms.html'>Terms of Service</a><a class='btn' href='privacy.html'>Privacy Policy</a></section>
-<div class='wrap'><div class='card'><h2>About NeoTicket</h2><p>NeoTicket is a Discord ticket management solution designed for communities, gaming servers and support teams.</p></div></div>
-<div class='footer'>© 2026 NeoTicket</div><script src='js/main.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoTicket</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+/* Variables de tema */
+:root {
+    --bg-color: #fff6fb;
+    --text-color: #423d52;
+    --card-bg: white;
+    --header-bg: white;
+    --ticket-box-bg: #fff0f7;
+    --shadow: 0 10px 30px rgba(255,0,128,.08);
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --card-bg: #2d2d2d;
+    --header-bg: #222;
+    --ticket-box-bg: #333;
+    --shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background: var(--header-bg);
+    padding:15px 25px;
+    box-shadow:0 5px 25px rgba(255,0,128,.08);
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:32px;
+    font-weight:800;
+    color:#ff4fa3;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+/* Botón modo noche */
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ff4fa3;
+    padding: 10px;
+}
+
+.btn{
+    background:#ff4fa3;
+    color:white;
+    padding:12px 25px;
+    border-radius:15px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn2{
+    background:transparent;
+    border:2px solid #ff4fa3;
+    color:#ff4fa3;
+}
+
+.hero{ padding:100px 20px; text-align:center; max-width:1200px; margin:auto; }
+.hero h1{ font-size:65px; font-weight:800; color:#ff4fa3; margin-bottom:20px; }
+.hero p{ font-size:22px; max-width:900px; margin:auto; line-height:1.8; }
+.hero-buttons{ margin-top:40px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap; }
+
+.preview{ padding:50px 20px; }
+.preview-card{ max-width:800px; margin:auto; background: var(--card-bg); border-radius:30px; padding:30px; box-shadow: var(--shadow); }
+.bot-header{ display:flex; align-items:center; gap:15px; margin-bottom:25px; }
+.bot-icon{ width:70px; height:70px; background:#ff4fa3; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; color:white; }
+.app-badge{ background:#ff4fa3; color:white; padding:6px 15px; border-radius:30px; font-size:14px; font-weight:600; }
+
+.ticket-box{ background: var(--ticket-box-bg); padding:25px; border-radius:20px; }
+
+.section{ padding:80px 20px; }
+.section-title{ text-align:center; font-size:55px; margin-bottom:20px; }
+.section-sub{ text-align:center; max-width:900px; margin:auto; font-size:20px; line-height:1.8; margin-bottom:50px; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px; max-width:1200px; margin:auto; }
+.card{ background: var(--card-bg); padding:30px; border-radius:25px; box-shadow: var(--shadow); }
+.card h3{ margin-bottom:15px; color:#ff4fa3; }
+
+.faq{ max-width:1000px; margin:auto; }
+.faq-item{ background: var(--card-bg); padding:25px; border-radius:20px; margin-bottom:15px; box-shadow: var(--shadow); }
+.faq-item h3{ color:#ff4fa3; margin-bottom:10px; }
+
+.contact{ padding:80px 20px; text-align:center; }
+.socials{ display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:25px; }
+.socials a{ text-decoration:none; background: var(--card-bg); padding:15px 25px; border-radius:15px; color:#ff4fa3; font-weight:700; box-shadow: var(--shadow); display: flex; align-items: center; gap: 8px; }
+
+footer{ background: var(--header-bg); margin-top:50px; padding:40px 20px; text-align:center; }
+footer a{ margin:0 10px; color:#ff4fa3; text-decoration:none; font-weight:600; }
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<a href="#" class="logo">🎀 NeoTicket</a>
+<div class="nav-links">
+    <button class="theme-btn" onclick="document.body.classList.toggle('dark-mode')">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <a href="terms.html" class="btn2 btn">Terms</a>
+    <a href="privacy.html" class="btn2 btn">Privacy</a>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<h1>NeoTicket</h1>
+<p>El sistema de tickets más moderno para Discord. Gestiona soporte, reportes, apelaciones, compras y solicitudes desde una interfaz rápida, elegante y fácil de utilizar.</p>
+<div class="hero-buttons">
+<a href="#" class="btn">➕ Invitar Bot</a>
+<a href="http://172.96.172.213:25405/login?r=%2F" class="btn btn2">📊 Dashboard</a>
+</div>
+</section>
+
+<section class="preview">
+<div class="preview-card">
+<div class="bot-header">
+<div class="bot-icon">🎫</div>
+<div><h2>NeoTicket</h2><span class="app-badge">APP</span></div>
+</div>
+<div class="ticket-box">
+<h3>🎟 Nuevo Ticket Creado</h3>
+<p>Hola @Usuario. Gracias por contactar con nuestro equipo de soporte. Un miembro del staff responderá tu solicitud lo antes posible. Ticket ID: #0001</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Funciones Principales</h2>
+<div class="grid">
+    <div class="card"><h3>🎫 Sistema de Tickets</h3><p>Crea tickets mediante botones, menús o comandos.</p></div>
+    <div class="card"><h3>⚡ Paneles Personalizados</h3><p>Diseña paneles únicos para soporte, compras, reportes y apelaciones.</p></div>
+    <div class="card"><h3>🔒 Permisos Avanzados</h3><p>Controla qué roles pueden abrir, gestionar o cerrar tickets.</p></div>
+    <div class="card"><h3>📜 Transcripciones</h3><p>Guarda conversaciones completas para futuras revisiones.</p></div>
+    <div class="card"><h3>📊 Estadísticas</h3><p>Visualiza actividad, tickets abiertos, cerrados y rendimiento del staff.</p></div>
+    <div class="card"><h3>🤖 Automatización</h3><p>Mensajes automáticos, respuestas rápidas y configuración sencilla.</p></div>
+</div>
+</section>
+
+<section class="contact">
+<h2 class="section-title">Contacto y Redes</h2>
+<div class="socials">
+    <a href="#"><i class="fa-brands fa-discord"></i> Discord</a>
+    <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
+    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    <a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i> X</a>
+</div>
+</section>
+
+<footer>
+<a href="terms.html">Terms of Service</a>
+<a href="privacy.html">Privacy Policy</a>
+<p style="margin-top:20px;">© 2026 NeoTicket. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
