@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | NeoTicket</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#0f111a;
+    --card:#1a1d2e;
+    --card2:#20243a;
+    --primary:#ff69c7;
+    --primary2:#ff9be0;
+    --text:#ffffff;
+    --muted:#c9c9d4;
+    --border:#2f3557;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+    padding:90px 0;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    font-size:1.2rem;
+    color:var(--muted);
+}
+
+.badges{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.badge{
+    padding:12px 20px;
+    border-radius:999px;
+    background:rgba(255,105,199,.12);
+    border:1px solid rgba(255,105,199,.4);
+    color:var(--primary2);
+    font-weight:600;
+}
+
+.contact-box{
+    margin-top:35px;
+}
+
+.contact-btn{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:18px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,var(--primary),#ff4db8);
+    font-weight:700;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.3rem;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-bottom:70px;
+}
+
+.stat{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+}
+
+.stat h3{
+    font-size:2rem;
+    color:var(--primary);
+}
+
+.stat p{
+    color:var(--muted);
+}
+
+.notice{
+    background:linear-gradient(135deg,#2c1736,#411f57);
+    border:1px solid rgba(255,105,199,.4);
+    padding:35px;
+    border-radius:25px;
+    margin-bottom:60px;
+}
+
+.notice h2{
+    margin-bottom:15px;
+    color:var(--primary2);
+}
+
+.notice ul{
+    padding-left:20px;
+}
+
+.notice li{
+    margin:10px 0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-bottom:70px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+}
+
+.icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+.timeline{
+    margin-bottom:70px;
+}
+
+.timeline-box{
+    background:var(--card2);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:30px;
+}
+
+.timeline-item{
+    padding:20px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.timeline-item:last-child{
+    border-bottom:none;
+}
+
+.timeline-item h3{
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.rights{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:35px;
+    margin-bottom:70px;
+}
+
+.rights ul{
+    padding-left:20px;
+}
+
+.rights li{
+    margin:12px 0;
+}
+
+.contact-card{
+    background:linear-gradient(135deg,#29122f,#461b5d);
+    border:1px solid rgba(255,105,199,.4);
+    border-radius:30px;
+    padding:50px;
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.contact-card h2{
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+.contact-card p{
+    margin-bottom:25px;
+    color:#e4d4ef;
+}
+
+.contact-card a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:var(--primary);
+    padding:15px 30px;
+    border-radius:15px;
+    font-weight:700;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#9e9eb0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="hero">
+
+<h1>Privacy Policy</h1>
+
+<p>
+This page explains what information NeoTicket processes, why it is collected,
+how long it may be stored, and your privacy rights when using our Discord bot.
+</p>
+
+<div class="badges">
+<span class="badge">🎫 Ticket System</span>
+<span class="badge">📁 Transcripts</span>
+<span class="badge">🔒 Secure</span>
+<span class="badge">🛡️ Anti Abuse</span>
+<span class="badge">⚖️ Privacy</span>
+</div>
+
+<div class="contact-box">
+<a href="mailto:support@neoticket.com" class="contact-btn">
+📧 support@neoticket.com
+</a>
+</div>
+
+</section>
+
+<h2 class="section-title">Overview</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>🎫</h3>
+<p>Ticket Management</p>
+</div>
+
+<div class="stat">
+<h3>📁</h3>
+<p>Transcripts & Logs</p>
+</div>
+
+<div class="stat">
+<h3>🔒</h3>
+<p>Security Controls</p>
+</div>
+
+<div class="stat">
+<h3>⚖️</h3>
+<p>User Privacy Rights</p>
+</div>
+
+</div>
+
+<div class="notice">
+
+<h2>🚫 What We Don't Do</h2>
+
+<ul>
+<li>We do not sell personal information.</li>
+<li>We do not share data with advertisers.</li>
+<li>We do not collect passwords.</li>
+<li>We do not collect payment information.</li>
+<li>We do not access private Discord messages unless explicitly provided through a ticket.</li>
+</ul>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🏢</div>
+<h2>Data Controller</h2>
+<p>
+The NeoTicket team is responsible for processing information necessary
+for operating the bot and providing support services.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🆔</div>
+<h2>Discord Data</h2>
+<p>
+User IDs, server IDs, role IDs, channel IDs, ticket IDs and
+configuration settings may be stored.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎫</div>
+<h2>Ticket Data</h2>
+<p>
+Ticket status, creation date, closure date, assigned staff,
+categories and support information.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💬</div>
+<h2>Messages & Content</h2>
+<p>
+Messages, attachments, images and links may be included in ticket
+transcripts when transcript features are enabled.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h2>Server Configuration</h2>
+<p>
+Support roles, categories, panels, welcome messages,
+logging channels and automation settings.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛡️</div>
+<h2>Anti Abuse</h2>
+<p>
+Information may be processed to prevent spam,
+ticket flooding, abuse and malicious activity.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📁</div>
+<h2>Transcripts</h2>
+<p>
+Ticket transcripts may be generated and stored
+according to server configuration choices.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌍</div>
+<h2>Third Party Services</h2>
+<p>
+Discord, hosting providers, databases and cloud services
+may process information necessary for operation.
+</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Data Retention</h2>
+
+<div class="timeline">
+
+<div class="timeline-box">
+
+<div class="timeline-item">
+<h3>⚙️ Configuration Data</h3>
+<p>Stored while the bot remains active in the server.</p>
+</div>
+
+<div class="timeline-item">
+<h3>🎫 Active Tickets</h3>
+<p>Stored until tickets are closed or removed.</p>
+</div>
+
+<div class="timeline-item">
+<h3>📁 Ticket Transcripts</h3>
+<p>Retention depends on administrator settings.</p>
+</div>
+
+<div class="timeline-item">
+<h3>🛡️ Security Logs</h3>
+<p>May be retained for abuse prevention and auditing.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="rights">
+
+<h2>⚖️ Your Rights</h2>
+
+<ul>
+<li>Request access to stored information.</li>
+<li>Request correction of inaccurate data.</li>
+<li>Request deletion where applicable.</li>
+<li>Request additional information regarding data processing.</li>
+<li>Contact us regarding privacy concerns.</li>
+</ul>
+
+</div>
+
+<div class="contact-card">
+
+<h2>Need Help?</h2>
+
+<p>
+Questions about privacy, data requests or ticket information?
+Contact our team anytime.
+</p>
+
+<a href="mailto:nvjmine2025@outlook.com">
+📧 nvjmine2025@outlook.com 
+</a>
+
+</div>
+
+<footer>
+© 2026 NeoTicket • Privacy Policy
+</footer>
+
+</div>
+
+</body>
+</html>
